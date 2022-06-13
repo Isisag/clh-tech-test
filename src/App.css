@@ -1,38 +1,80 @@
-.App {
+/* HELPERS */
+:root {
+  --primary: #6bdb9a;
+  --secondary: #4657f0;
+  --error: #e31e2e;
+  --primary-hover: #3aa566;
+  --error-hover: #a11723;
+}
+
+header {
+  width: 100%;
+  background-color: var(--secondary);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* APP COMPONENT */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* CONTAINER COMPONENT */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.create-counter {
+  padding: 1rem 3rem;
+  background-color: #6bdb9a;
+  margin: 2rem auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.create-counter:hover {
+  background-color: var(--primary-hover);
+}
+
+.counters-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.counters-individual {
+  display: flex;
+  justify-content: space-between;
+  background-color: #6bdb9a;
+  width: 95%;
+  margin: 1rem auto;
+}
+
+.counters-info {
+  display: flex;
+}
+
+.counters-individual > h2,
+.counters-info {
+  margin: auto 2rem;
+}
+
+/* COUNTERS */
+
+.container > h3 {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

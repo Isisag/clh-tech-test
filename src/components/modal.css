@@ -1,0 +1,95 @@
+/* MODAL STRUCTURE */
+
+.modal-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: modalAnimation 0.5s ease-in-out;
+}
+
+@keyframes modalAnimation {
+  0% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  display: none;
+}
+
+.modal-content {
+  display: grid;
+  position: relative;
+  grid-template-columns: 3;
+  background-color: #2b469e;
+  padding: 2rem;
+}
+
+.modal-content > .close {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+.modal-content > .close > svg {
+  fill: var(--error);
+  font-size: 2em;
+  margin: 0.5rem 0rem;
+}
+
+/* BUTTONS */
+
+.buttons {
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.button-check {
+  margin: auto 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.button-check:hover {
+  background-color: var(--primary-hover);
+}
+
+.button-cancel {
+  margin: auto 0.5rem;
+  background-color: var(--error);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-cancel:hover {
+  background-color: var(--error-hover);
+}
+
+/* ERRORS - INPUT */
+
+.modal-content > input {
+  width: 60%;
+  margin: 0rem auto;
+}
+
+.modal-content > p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-rest > svg {
+  fill: var(--error);
+}
+
+.button-add > svg {
+  fill: #2243bd;
+}
